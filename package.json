@@ -1,0 +1,27 @@
+{
+  "name": "gambling-room",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./style/style.css",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./style/style.css --watch",
+    "build-tailwind": "nodemon npm run build:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majtobijakodric/gambling-room.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/majtobijakodric/gambling-room/issues"
+  },
+  "homepage": "https://github.com/majtobijakodric/gambling-room#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "tailwindcss": "^4.2.4"
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "tailwindCSS.includeLanguages": {
+        "php": "html"
+    },
+    "tailwindCSS.experimental.configFile": "src/input.css",
+    "editor.quickSuggestions": {
+        "strings": "on"
+    }
+}

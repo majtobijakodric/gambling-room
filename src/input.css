@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@source "../*.php";
+@source "../sites/**/*.php";
+@source "../js/**/*.js";
+
+@theme {
+    --color-shadow: #718096;
+}
