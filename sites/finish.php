@@ -82,13 +82,27 @@ function e($value)
             <p class="font-bold">Winner</p>
             <p><?php echo e($winnerText); ?></p>
         </div>
+        <!-- shows time left til redirect -->
+        <div class="text-center mt-4">
+            <p class="text-gray-600">Redirecting in <span id="countdown">10</span> seconds...</p>
+        </div>
     </div>
+
 
     <script>
         // go back to the first page after 10 seconds
-        setTimeout(function() {
-            window.location.href = '../index.php?reset=1';
-        }, 10000);
+        let timeLeft = 10;
+        const countdownElement = document.getElementById('countdown');
+
+        const countdownInterval = setInterval(function() {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = '../index.php?reset=1';
+            }
+        }, 1000);
     </script>
 </body>
 
