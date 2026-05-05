@@ -1,6 +1,14 @@
 <?php
 session_start();
 
+// clear old session after the finish page
+if (isset($_GET['reset'])) {
+    session_unset();
+    session_destroy();
+    header('Location: index.php');
+    exit;
+}
+
 $_SESSION['numOfTurns'] = 3;
 
 if (isset($_POST['submit'])) {
@@ -9,17 +17,22 @@ if (isset($_POST['submit'])) {
     $user3 = trim($_POST['user3']);
 
     if ($user1 !== "" && $user2 !== "" && $user3 !== "") {
+        // reset old game data
+        session_unset();
+
+        // save players
         $_SESSION['user1'] = $user1;
         $_SESSION['user2'] = $user2;
         $_SESSION['user3'] = $user3;
-        $_SESSION['user1Score'] = 0;
-        $_SESSION['user2Score'] = 0;
-        $_SESSION['user3Score'] = 0;
+
+        // prepare dice rolls
+        $_SESSION['user1Rolls'] = [];
+        $_SESSION['user2Rolls'] = [];
+        $_SESSION['user3Rolls'] = [];
         $_SESSION['currentPlayer'] = 1;
         $_SESSION['rollsTaken'] = 0;
         $_SESSION['lastRoll'] = null;
         $_SESSION['lastPlayer'] = null;
-        $_SESSION['gameFinished'] = false;
 
         echo "<script>window.location.href = 'sites/home.php';</script>";
         exit;
