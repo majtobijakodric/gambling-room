@@ -59,13 +59,13 @@ if (isset($_POST['submit'])) {
         <form id="playerForm" action="" method="post" class="flex flex-col gap-3">
 
             <label for="user1">First Player</label>
-            <input type="text" name="user1" id="user1" placeholder="" class="border border-gray-300 rounded-md ">
+            <input type="text" name="user1" id="user1" placeholder="" class="border rounded-md border-black">
 
             <label for="user2">Second Player</label>
-            <input type="text" name="user2" id="user2" placeholder="" class="border border-gray-300 rounded-md ">
+            <input type="text" name="user2" id="user2" placeholder="" class="border rounded-md border-black">
 
             <label for="user3">Third Player</label>
-            <input type="text" name="user3" id="user3" placeholder="" class="border border-gray-300 rounded-md ">
+            <input type="text" name="user3" id="user3" placeholder="" class="border rounded-md border-black">
 
             <input type="submit" value="Start game" name="submit" id="startGame" class="inline-block px-4 py-2 text-base font-medium leading-tight text-gray-800 border-2 border-gray-900 rounded-lg bg-gray-50 shadow-[4px_4px_0px_0px_var(--color-gray-900)] cursor-pointer transition-all duration-100 active:translate-x-1 active:translate-y-1 active:shadow-none disabled:opacity-50">
         </form>

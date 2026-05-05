@@ -37,6 +37,18 @@ if ($user3Score == $highestScore) {
     $winnerText .= $_SESSION['user3'];
 }
 
+// prepare leaderboard
+$players = [
+    ['name' => $_SESSION['user1'], 'score' => $user1Score],
+    ['name' => $_SESSION['user2'], 'score' => $user2Score],
+    ['name' => $_SESSION['user3'], 'score' => $user3Score],
+];
+
+// sort players by score
+usort($players, function ($a, $b) {
+    return $b['score'] - $a['score'];
+});
+
 function e($value)
 {
     // htmlspecialchars converts special characters (like <, >, &, " and ') in a string into their corresponding HTML entities so they display safely in a webpage.
@@ -56,32 +68,29 @@ function e($value)
 
 <body class="w-screen h-screen flex items-center justify-center bg-blue-400">
     <div class="w-160 h-100 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-3">
-        <h1 class="text-center font-bold mb-5">Game finished</h1>
+        <h1 class="text-center font-bold mb-5">Score board</h1>
 
+        <!-- leaderboard -->
         <div class="flex flex-col gap-3">
             <!-- first player result -->
             <div class="flex items-center justify-between border-2 border-gray-900 rounded-lg p-2">
-                <p class="font-semibold"><?php echo e($_SESSION['user1']); ?></p>
-                <p><?php echo (int) $user1Score; ?></p>
+                <p class="font-semibold"><?php echo e($players[0]['name']); ?></p>
+                <p><?php echo $players[0]['score']; ?></p>
             </div>
 
             <!-- second player result -->
             <div class="flex items-center justify-between border-2 border-gray-900 rounded-lg p-2">
-                <p class="font-semibold"><?php echo e($_SESSION['user2']); ?></p>
-                <p><?php echo (int) $user2Score; ?></p>
+                <p class="font-semibold"><?php echo e($players[1]['name']); ?></p>
+                <p><?php echo $players[1]['score']; ?></p>
             </div>
 
             <!-- third player result -->
             <div class="flex items-center justify-between border-2 border-gray-900 rounded-lg p-2">
-                <p class="font-semibold"><?php echo e($_SESSION['user3']); ?></p>
-                <p><?php echo (int) $user3Score; ?></p>
+                <p class="font-semibold"><?php echo e($players[2]['name']); ?></p>
+                <p><?php echo $players[2]['score']; ?></p>
             </div>
         </div>
 
-        <div class="mt-auto text-center">
-            <p class="font-bold">Winner</p>
-            <p><?php echo e($winnerText); ?></p>
-        </div>
         <!-- shows time left til redirect -->
         <div class="text-center mt-4">
             <p class="text-gray-600">Redirecting in <span id="countdown">10</span> seconds...</p>
