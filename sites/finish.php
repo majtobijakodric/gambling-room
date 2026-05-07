@@ -64,36 +64,118 @@ function e($value)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gambling room</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/clouds.css">
+    <link rel="stylesheet" href="../style/font.css">
+    <style>
+        .cloud {
+            animation-delay: -<?php echo round(microtime(true), 3); ?>s;
+        }
+    </style>
 </head>
 
 <body class="w-screen h-screen flex items-center justify-center bg-blue-400">
-    <div class="w-160 h-100 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-3">
+    <div class="cloud-stage" aria-hidden="true">
+        <div class="cloud large cloud-1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cloud normal cloud-2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cloud small cloud-3">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cloud tiny cloud-4">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cloud large cloud-5">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cloud normal cloud-6">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cloud small cloud-7">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cloud tiny cloud-8">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cloud small cloud-9">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cloud normal cloud-10">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cloud tiny cloud-11">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="cloud small cloud-12">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="relative z-10 w-160 h-100 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-3">
         <h1 class="text-center font-bold mb-5">Score board</h1>
 
         <!-- leaderboard -->
         <div class="flex flex-col gap-3">
             <!-- first player result -->
             <div class="flex items-center justify-between border-2 border-gray-900 rounded-lg p-2">
-                <p class="font-semibold"><?php echo e($players[0]['name']); ?></p>
+                <p class="font-semibold text-yellow-400"><?php echo e($players[0]['name']); ?></p>
                 <p><?php echo $players[0]['score']; ?></p>
             </div>
 
             <!-- second player result -->
             <div class="flex items-center justify-between border-2 border-gray-900 rounded-lg p-2">
-                <p class="font-semibold"><?php echo e($players[1]['name']); ?></p>
+                <p class="font-semibold text-gray-400"><?php echo e($players[1]['name']); ?></p>
                 <p><?php echo $players[1]['score']; ?></p>
             </div>
 
             <!-- third player result -->
             <div class="flex items-center justify-between border-2 border-gray-900 rounded-lg p-2">
-                <p class="font-semibold"><?php echo e($players[2]['name']); ?></p>
+                <p class="font-semibold text-orange-500"><?php echo e($players[2]['name']); ?></p>
                 <p><?php echo $players[2]['score']; ?></p>
             </div>
         </div>
 
         <!-- shows time left til redirect -->
-        <div class="text-center mt-4">
-            <p class="text-gray-600">Redirecting in <span id="countdown">10</span> seconds...</p>
+        <div class="text-center mt-auto">
+            <p class="text-gray-600 text-oklch(47.3% 0.137 46.201)">Redirecting in <span id="countdown">10</span> seconds...</p>
         </div>
     </div>
 

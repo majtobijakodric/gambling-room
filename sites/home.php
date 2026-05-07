@@ -80,10 +80,56 @@ function e($value)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gambling room</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/clouds.css">
+    <link rel="stylesheet" href="../style/font.css">
+    <style>
+        .cloud {
+            animation-delay: -<?php echo round(microtime(true), 3); ?>s;
+        }
+    </style>
 </head>
 
 <body class="w-screen h-screen flex items-center justify-center bg-blue-400">
-    <div class="w-160 h-100 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-1">
+    <div class="cloud-stage" aria-hidden="true">
+        <div class="cloud large cloud-1">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud normal cloud-2">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud small cloud-3">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud tiny cloud-4">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud large cloud-5">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud normal cloud-6">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud small cloud-7">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud tiny cloud-8">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud small cloud-9">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud normal cloud-10">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud tiny cloud-11">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud small cloud-12">
+            <div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+
+    <div class="relative z-10 w-160 h-100 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-1">
         <div class="flex w-full h-full">
             <!-- player info -->
             <div class="w-1/3 h-full border-r-2 border-r-black">
