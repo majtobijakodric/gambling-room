@@ -162,7 +162,7 @@ function e($value)
                 <img src="../assets/<?php echo e($diceImage); ?>" alt="dice" width="200" height="200">
 
                 <form method="post" class="mt-auto self-center">
-                    <button type="submit" name="rollDice" class="relative inline-block text-base group active:translate-x-1 active:translate-y-1 disabled:opacity-50">
+                    <button type="submit" name="rollDice" class="relative inline-block text-base group active:translate-x-1 active:translate-y-1 disabled:opacity-50 cursor-pointer">
                         <span class="relative z-10 block px-4 py-2 font-medium leading-tight text-gray-800 border-2 border-gray-900 rounded-lg bg-gray-50">
                             Roll dice
                         </span>
