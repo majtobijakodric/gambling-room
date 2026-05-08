@@ -149,7 +149,7 @@ function e($value)
         </div>
     </div>
 
-    <div class="relative z-10 w-160 h-100 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-3">
+    <div class="relative z-10 w-160 h-100 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-3  scale-150">
         <h1 class="text-center font-bold mb-5">Score board</h1>
 
         <!-- leaderboard -->
@@ -187,7 +187,7 @@ function e($value)
 
         const countdownInterval = setInterval(function() {
             timeLeft--;
-            countdownElement.textContent = timeLeft;
+                countdownElement.textContent = timeLeft;
 
             if (timeLeft <= 0) {
                 clearInterval(countdownInterval);

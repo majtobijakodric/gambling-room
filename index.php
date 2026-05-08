@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body class="w-screen h-screen">
-    <div class="w-screen h-screen flex items-center justify-center bg-blue-400">
+    <div class="w-screen h-screen flex items-center justify-center bg-blue-400 scale-150">
         <div class="cloud-stage" aria-hidden="true">
             <div class="cloud large cloud-1">
                 <div></div>
@@ -141,14 +141,14 @@ if (isset($_POST['submit'])) {
         <div id="aboutMenu" class="fixed hidden z-100 w-screen h-screen">
             <div class="flex items-center justify-center w-full h-full">
                 <div class="relative z-10 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-1 justify-center">
-                    <p class="text-center  mb-5">Hi there this is made by <a href="https://github.com/majtobijakodric" target="_blank" class="font-extrabold hover:text-blue-300">Maj Tobija Kodrič</a></p>
+                    <p class="text-center m-5">Hi there this is made by <a href="https://github.com/majtobijakodric" target="_blank" class="font-extrabold hover:underline ">Maj Tobija Kodrič</a></p>
                 </div>
             </div>
         </div>
 
         <!-- about menu button -->
-        <div class="fixed bottom-1 right-1.5 cursor-pointer z-100">
-            <button onclick="toggleAboutMenu()"> <img src="assets/aboutCloud.png" alt="aboutCloud" width="55px" height="55px"></button>
+        <div class="fixed bottom-1 right-1.5  z-100 hover:scale-125 transition-transform duration-200">
+            <button onclick="toggleAboutMenu()" class="cursor-pointer"> <img src="assets/aboutCloud.png" alt="aboutCloud" width="55px" height="55px"></button>
         </div>
 
         <div id="mainForm" class="relative z-10 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-1">
