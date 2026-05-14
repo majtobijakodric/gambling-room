@@ -74,7 +74,7 @@ function e($value)
 </head>
 
 <body class="w-screen h-screen flex items-center justify-center bg-blue-400">
-    <div class="cloud-stage" aria-hidden="true">
+    <div class="cloud-stage">
         <div class="cloud large cloud-1">
             <div></div>
             <div></div>
@@ -153,29 +153,35 @@ function e($value)
         <h1 class="text-center font-bold mb-5">Score board</h1>
 
         <!-- leaderboard -->
-        <div class="flex flex-col gap-3">
-            <!-- first player result -->
-            <div class="flex items-center justify-between border-2 border-gray-900 rounded-lg p-2">
-                <p class="font-semibold text-yellow-400"><?php echo e($players[0]['name']); ?></p>
-                <p><?php echo $players[0]['score']; ?></p>
-            </div>
-
-            <!-- second player result -->
-            <div class="flex items-center justify-between border-2 border-gray-900 rounded-lg p-2">
-                <p class="font-semibold text-gray-400"><?php echo e($players[1]['name']); ?></p>
-                <p><?php echo $players[1]['score']; ?></p>
-            </div>
-
-            <!-- third player result -->
-            <div class="flex items-center justify-between border-2 border-gray-900 rounded-lg p-2">
-                <p class="font-semibold text-orange-500"><?php echo e($players[2]['name']); ?></p>
-                <p><?php echo $players[2]['score']; ?></p>
+        <div class="flex flex-col gap-3 h-full">
+            <div class="flex w-full h-full">
+                <div id="second" class="w-1/3 text-center flex flex-col">
+                    <div class="mt-auto mb-1">
+                        <p class="font-semibold text-slate-500"><?php echo e($players[1]['name']); ?></p>
+                        <p>Score: <?php echo $players[1]['score']; ?></p>
+                    </div>
+                    <div class="bg-slate-500 h-30 border-2 border-gray-900 rounded-lg rounded-b-none"></div>
+                </div>
+                <div id="first" class="mr-4 ml-4 w-1/3 h-full text-center flex flex-col ">
+                    <div class="mt-auto mb-1">
+                        <p class="font-semibold text-blue-600"><?php echo e($players[0]['name']); ?></p>
+                        <p>Score: <?php echo $players[0]['score']; ?></p>
+                    </div>
+                    <div class="bg-blue-500 h-50 border-2 border-gray-900 rounded-lg rounded-b-none"></div>
+                </div>
+                <div id="third" class="w-1/3 h-full text-center flex flex-col">
+                    <div class="mt-auto mb-1">
+                        <p class="font-semibold text-gray-900"><?php echo e($players[2]['name']); ?></p>
+                        <p>Score: <?php echo $players[2]['score']; ?></p>
+                    </div>
+                    <div class="bg-gray-900 h-11 border-2 border-gray-900 rounded-lg rounded-b-none"></div>
+                </div>
             </div>
         </div>
 
         <!-- shows time left til redirect -->
         <div class="text-center mt-auto">
-            <p class="text-gray-600 text-oklch(47.3% 0.137 46.201)">Redirecting in <span id="countdown">10</span> seconds...</p>
+            <p class="text-xs text-black">Redirecting in <span id="countdown">10</span> seconds...</p>
         </div>
     </div>
 
