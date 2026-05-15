@@ -66,6 +66,8 @@ function e($value)
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/clouds.css">
     <link rel="stylesheet" href="../style/font.css">
+    <link rel="shortcut icon" href="assets/icons8-cloud-96.png" type="image/x-icon">
+
     <style>
         .cloud {
             animation-delay: -<?php echo round(microtime(true), 3); ?>s;
@@ -188,18 +190,18 @@ function e($value)
 
     <script>
         // go back to the first page after 10 seconds
-        let timeLeft = 10;
-        const countdownElement = document.getElementById('countdown');
+        // let timeLeft = 10;
+        // const countdownElement = document.getElementById('countdown');
 
-        const countdownInterval = setInterval(function() {
-            timeLeft--;
-                countdownElement.textContent = timeLeft;
+        // const countdownInterval = setInterval(function() {
+        //     timeLeft--;
+        //         countdownElement.textContent = timeLeft;
 
-            if (timeLeft <= 0) {
-                clearInterval(countdownInterval);
-                window.location.href = '../index.php?reset=1';
-            }
-        }, 1000);
+        //     if (timeLeft <= 0) {
+        //         clearInterval(countdownInterval);
+        //         window.location.href = '../index.php?reset=1';
+        //     }
+        // }, 1000);
     </script>
 </body>
 

@@ -67,6 +67,7 @@ function e($value)
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/clouds.css">
     <link rel="stylesheet" href="../style/font.css">
+    <link rel="shortcut icon" href="assets/icons8-cloud-96.png" type="image/x-icon">
     <style>
         .cloud {
             animation-delay: -<?php echo round(microtime(true), 3); ?>s;
@@ -75,6 +76,7 @@ function e($value)
 </head>
 
 <body class="w-screen h-screen flex items-center justify-center bg-blue-400">
+    <!-- clouds -->
     <div class="cloud-stage">
         <div class="cloud large cloud-1">
             <div></div>
@@ -153,7 +155,7 @@ function e($value)
     <div class="relative z-10 w-160 h-100 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-1 scale-150">
         <div class="flex w-full h-full">
             <!-- player info -->
-            <div class="w-1/3 h-full border-r-2 border-r-black">
+            <div class="w-1/3 h-full border-r-2 pr-4 border-r-black">
                 <ul role="list" class="flex h-full flex-col divide-y divide-white/5 mr-15 w-full">
                     <!-- first player -->
                     <li class="flex flex-1 items-center justify-between gap-x-6 rounded-3xl p-3 <?php echo $currentPlayer == 1 ? 'border-2 border-gray-900 bg-gray-800/5 rounded-lg' : 'border-2 border-transparent'; ?> w-fit">
@@ -224,7 +226,7 @@ function e($value)
 
             <!-- dice -->
             <div class="w-full h-full p-4 flex flex-col items-center">
-                <p class="text-lg font-bold text-gray-900"><?php echo e($turnMessage); ?></p>
+                <p class="text-lg font-bold text-gray-900 mb-6"><?php echo e($turnMessage); ?></p>
 
                 <img src="../assets/dice/<?php echo e($diceImage); ?>" alt="dice" width="200" height="200">
 
