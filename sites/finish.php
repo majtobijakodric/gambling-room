@@ -67,7 +67,7 @@ function e($value)
     <link rel="stylesheet" href="../style/clouds.css">
     <link rel="stylesheet" href="../style/font.css">
     <link rel="shortcut icon" href="assets/icons8-cloud-96.png" type="image/x-icon">
-
+    <link rel="stylesheet" href="../style/fireworks.css">
     <style>
         .cloud {
             animation-delay: -<?php echo round(microtime(true), 3); ?>s;
@@ -76,6 +76,8 @@ function e($value)
 </head>
 
 <body class="w-screen h-screen flex items-center justify-center bg-blue-400">
+    <div id="finishFireworks" class="frwdStage" aria-hidden="true"></div>
+
     <div class="cloud-stage">
         <div class="cloud large cloud-1">
             <div></div>
@@ -190,19 +192,20 @@ function e($value)
 
     <script>
         // go back to the first page after 10 seconds
-        // let timeLeft = 10;
-        // const countdownElement = document.getElementById('countdown');
+        let timeLeft = 10;
+        const countdownElement = document.getElementById('countdown');
 
-        // const countdownInterval = setInterval(function() {
-        //     timeLeft--;
-        //         countdownElement.textContent = timeLeft;
+        const countdownInterval = setInterval(function() {
+            timeLeft--;
+                countdownElement.textContent = timeLeft;
 
-        //     if (timeLeft <= 0) {
-        //         clearInterval(countdownInterval);
-        //         window.location.href = '../index.php?reset=1';
-        //     }
-        // }, 1000);
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = '../index.php?reset=1';
+            }
+        }, 1000);
     </script>
+    <script defer src="../js/fireworks.js"></script>
 </body>
 
 </html>

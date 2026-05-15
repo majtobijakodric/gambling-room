@@ -1,0 +1,32 @@
+/* The CSS below, for the fireworks animation, has an 'MIT' license. Copyright (c) 2024 by Yusuke Nakaya (https://codepen.io/YusukeNakaya/pen/zYvWGwb) */
+    .frwdStage {
+        height: 100%;
+        width: 100%;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3000;
+    }
+    .frwdStage div {
+        transform-style: preserve-3d;
+    }
+    .frwdSpark {
+        position: absolute;
+        transform-origin: 0 0;
+    }
+    .frwdFire {
+        position: absolute;
+    }
+    .frwdFire::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(0.1px);
+    }
