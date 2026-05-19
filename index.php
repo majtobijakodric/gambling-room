@@ -137,20 +137,6 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
 
-        <!-- by default hidden about menu -->
-        <div id="aboutMenu" class="fixed hidden z-100 w-screen h-screen">
-            <div class="flex items-center justify-center w-full h-full">
-                <div class="relative z-10 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-1 justify-center">
-                    <p class="text-center m-5">Hi there this is made by <a href="https://github.com/majtobijakodric" target="_blank" class="font-extrabold hover:underline ">Maj Tobija Kodrič</a></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- about menu button -->
-        <div class="fixed bottom-1 right-1.5  z-100 hover:scale-125 transition-transform duration-200">
-            <button onclick="toggleAboutMenu()" class="cursor-pointer"> <img src="assets/aboutCloud.png" alt="aboutCloud" width="55px" height="55px"></button>
-        </div>
-
         <div id="mainForm" class="relative z-10 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-1">
             <h1 class="text-center font-bold mb-5">Gambling room</h1>
             <form id="playerForm" action="" method="post" class="flex flex-col gap-3">
@@ -166,6 +152,19 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 
+    <!-- by default hidden about menu -->
+    <div id="aboutMenu" class="fixed hidden w-screen h-screen" style="inset: 0; z-index: 100;">
+        <div class="flex items-center justify-center w-full h-full">
+            <div class="relative z-10 border-2 border-gray-900 rounded-lg p-6 shadow-[8px_8px_0px_0px_var(--color-gray-900)] bg-gray-50 flex flex-col gap-1 justify-center">
+                <p class="text-center m-5">Hi there this is made by <a href="https://github.com/majtobijakodric" target="_blank" class="font-extrabold hover:underline ">Maj Tobija Kodrič</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- about menu button -->
+    <div class="fixed bottom-1 right-1.5 hover:scale-125 transition-transform duration-200" style="z-index: 101;">
+        <button onclick="toggleAboutMenu()" class="cursor-pointer"> <img src="assets/aboutCloud.png" alt="aboutCloud" width="55px" height="55px"></button>
+    </div>
 
     <script defer src="js/main.js"></script>
 </body>
